@@ -5,7 +5,6 @@ Simple anigram finder in Haskell. Aiming to be functional equivalent to anigrame
 ### Project Files
 
 ```
-├── LICENSE       GPL v3
 ├── margarine     Prebuilt static binary
 ├── margarine.hs  The Source
 └── README.md     This readme
