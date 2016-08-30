@@ -1,6 +1,6 @@
 # Margarine
 
-Simple anigram finder in Haskell
+Simple anigram finder in Haskell. Aiming to be functional equivalent to anigramer.
 
 
 ## Usage
