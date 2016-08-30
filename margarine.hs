@@ -1,6 +1,6 @@
 import Data.Char
-import Data.List.Split
 import Data.List
+import Data.List.Split
 import Data.Ord
 import System.Environment
 import System.IO
