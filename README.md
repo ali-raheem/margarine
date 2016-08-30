@@ -1,5 +1,4 @@
 # Margarine
-
 Simple anigram finder in Haskell. Aiming to be functional equivalent to anigramer.
 
 
@@ -15,4 +14,3 @@ Simple anigram finder in Haskell. Aiming to be functional equivalent to anigrame
 ### Todo
 
 1. Handle not getting any arguments
-2. Pretty print

@@ -28,4 +28,4 @@ main = do
        args <- getArgs
        words <- readFile $ head args
        needle <- getUserQuery
-       print $ findWordInList (wordsToList words) $ hashKey needle
+       mapM_ putStrLn $ findWordInList (wordsToList words) $ hashKey needle
