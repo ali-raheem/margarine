@@ -1,5 +1,8 @@
-# Margarine  v0.1.1
+# margarine  v0.1.1
+
 Simple anigram finder in Haskell. Aiming to be functional equivalent to anigramer.
+
+### Project Files
 
 ```
 ├── LICENSE       GPL v3
@@ -8,7 +11,11 @@ Simple anigram finder in Haskell. Aiming to be functional equivalent to anigrame
 └── README.md     This readme
 ```
 
-## Building
+### Dependencies
+
+Compiled with GHC not external modules.
+
+### Building
 
 By default ghc will build a statically linked binary which weighs in at about 2.2MB, this is how the pre-built binary is made.
 
@@ -22,13 +29,15 @@ To get a smaller dynamically linked one about 25KB use the -dynamic flag.
 $ ghc --make -O2 -dynamic margarine.hs
 ```
 
-## Usage
+### Running
 
 ```
 ./margarine word_list
 ```
 
-### Example
+Where word_list is the path to a newline seperated list of words.
+
+### Sample output
 
 ```
 ./margarine /usr/share/dict/american-english
