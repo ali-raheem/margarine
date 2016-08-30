@@ -9,9 +9,9 @@ wordsToList = makeDict . lines
 toAlpha = filter isAlpha
 wordToLower = map toLower
 wordsToAlpha = map toAlpha
+
 hashWord x = sort $ wordToLower x
 hashWordList = map hashWord
-
 hashKey = hashWord . toAlpha
 
 findWordInList list key = [word | (k, word) <- list, k == key]
