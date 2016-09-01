@@ -10,7 +10,7 @@ toAlpha = filter isAlpha
 wordToLower = map toLower
 wordsToAlpha = map toAlpha
 
-hashWord x = sort $ wordToLower x
+hashWord = sort . wordToLower 
 hashWordList = map hashWord
 hashKey = hashWord . toAlpha
 

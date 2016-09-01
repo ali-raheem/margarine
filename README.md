@@ -1,4 +1,4 @@
-# margarine  v0.1.1
+# margarine  v0.1.2
 
 Simple anigram finder in Haskell. Aiming to be functional equivalent to anigramer.
 
