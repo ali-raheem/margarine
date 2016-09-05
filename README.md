@@ -1,4 +1,4 @@
-# margarine  v0.1.2
+# margarine  v0.2.0
 
 Simple anigram finder in Haskell. Aiming to be functional equivalent to anigramer.
 Broken lets you find the longest 5 words you can type with a partiuclar set of keys.
@@ -6,10 +6,13 @@ Broken lets you find the longest 5 words you can type with a partiuclar set of k
 ### Project Files
 
 ```
-├── margarine     Prebuilt static binary
-├── margarine.hs  The Source for margarine
-├── broken.hs	  The Source for broken mode
-└── README.md     This readme
+margarine/
+├── broken.hs
+├── margarine
+├── margarine.hs
+└── README.md
+
+0 directories, 4 files
 ```
 
 ### Dependencies
