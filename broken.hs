@@ -7,29 +7,26 @@ import System.IO
 
 lettersOnly = filter isAlpha
 wordToLower = map toLower
-wordToHash = nub . lettersOnly . wordToLower
+wordToHash = nub .  wordToLower . lettersOnly
 
-canWrite w k = foldr (&&) True (map (`elem` (wordToLower k)) (wordToHash w))
+canWrite w k = all (`elem` wordToLower k) (wordToHash w)
 
-sortByLongest = reverse . (sortBy (comparing length))
-longest5 = (take 5) . sortByLongest
+sortByLongest = sortBy (flip (comparing length))
+longest5 = take 5 . sortByLongest
 
 getUserQuery = do
   putStr "Enter keys: "
   hFlush stdout
   getLine
 
---getWordList = do
---  args <- getArgs
---  wordsFile <- readFile $ head args
---  lines wordsFile
+getWordList = do
+  wordFileName:_ <- getArgs
+  wordsFile <- readFile wordFileName
+  return (lines wordsFile)
   
 main = do
   progArgs <- getArgs
-  let wordsFileName = head progArgs
-  wordsFile <- readFile wordsFileName
-  let wordsList = lines wordsFile
---  wordsList <- getWordList
+  wordsList <- getWordList
   keys <- getUserQuery
 
   let words = [w | w <- wordsList, canWrite w keys]
