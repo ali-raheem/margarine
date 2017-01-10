@@ -10,13 +10,13 @@ toAlpha = filter isAlpha
 wordToLower = map toLower
 wordsToAlpha = map toAlpha
 
-hashWord = sort . wordToLower 
-hashWordList = map hashWord
-hashKey = hashWord . toAlpha
+mungWord = sort . wordToLower 
+mungWordList = map mungWord
+mungKey = mungWord . toAlpha
 
 findWordInList list key = [word | (k, word) <- list, k == key]
 
-makeDict x = zip (hashWordList lettersOnly) x
+makeDict x = zip (mungWordList lettersOnly) x
              where lettersOnly = wordsToAlpha x
 
 getUserQuery = do
@@ -25,7 +25,7 @@ getUserQuery = do
        getLine
        
 main = do
-       args <- getArgs
-       words <- readFile $ head args
+       fileName:_ <- getArgs
+       words <- readFile $ fileName
        needle <- getUserQuery
-       mapM_ putStrLn $ findWordInList (wordsToList words) $ hashKey needle
+       mapM_ putStrLn $ findWordInList (wordsToList words) $ mungKey needle
