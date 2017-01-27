@@ -49,6 +49,8 @@ Enter letters: anigramer
 margarine
 ```
 
+![Sample output screenshot](screenshot.png)
+
 ### Todo
 
 1. Handle not getting any arguments
